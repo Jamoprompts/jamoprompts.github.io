@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jameson Francis — AI Builder</title>
+<meta name="description" content="Jameson Francis builds and ships AI products end to end: content and data systems, computer-vision pipelines, and full-stack apps.">
+<style>
+  :root{
+    --ink:#14181f; --muted:#5b6573; --line:#e4e7ec; --bg:#fbfbfa; --card:#ffffff;
+    --accent:#1f4eae; --chip:#eef1f6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:880px;margin:0 auto;padding:56px 24px 80px}
+  header{border-bottom:1px solid var(--line);padding-bottom:24px;margin-bottom:32px}
+  h1{font-family:Georgia,"EB Garamond",serif;font-size:38px;letter-spacing:.5px;font-weight:700}
+  .tag{font-size:17px;color:var(--muted);margin-top:8px;max-width:620px}
+  .contact{margin-top:16px;font-size:14px}
+  .contact a{color:var(--accent);text-decoration:none;margin-right:16px;border-bottom:1px solid transparent}
+  .contact a:hover{border-bottom-color:var(--accent)}
+  h2{font-family:Georgia,serif;font-size:15px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);
+    margin:36px 0 16px;font-weight:700}
+  .intro{font-size:16px;color:var(--ink);max-width:680px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:680px){.grid{grid-template-columns:1fr}.wrap{padding:36px 18px 60px}h1{font-size:30px}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 20px 18px;
+    display:flex;flex-direction:column}
+  .card h3{font-size:18px;margin-bottom:2px}
+  .stack{font-size:12.5px;color:var(--muted);margin-bottom:10px}
+  .desc{font-size:14px;color:#39404b;flex:1}
+  .row{display:flex;align-items:center;justify-content:space-between;margin-top:14px;gap:10px}
+  .chip{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.4px;padding:3px 9px;border-radius:999px;
+    background:var(--chip);color:#33405a}
+  .chip.live{background:#e7f6ec;color:#1c7a3e}
+  .chip.val{background:#fff3e0;color:#9a5b00}
+  .chip.oss{background:#eaf0ff;color:#1f4eae}
+  .links a{font-size:13px;color:var(--accent);text-decoration:none;margin-left:14px;font-weight:600}
+  .links a:hover{text-decoration:underline}
+  footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Jameson Francis</h1>
+    <div class="tag">Economics senior who builds and ships AI products end to end, content and data systems, computer-vision pipelines, and full-stack apps. I care about systems that are documented, governed, and repeatable.</div>
+    <div class="contact">
+      <a href="mailto:jamesongfrancis@icloud.com">jamesongfrancis@icloud.com</a>
+      <a href="https://www.linkedin.com/in/jameson-fran" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Jamoprompts" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </header>
+
+  <h2>How I work</h2>
+  <p class="intro">I use generative AI (Claude, ChatGPT, Gemini, Copilot) daily and refine prompts across models to improve output quality. The constant across everything below: ground the system in real data, keep the model as the last step rather than the source of truth, and document each workflow so it reruns with little rework.</p>
+
+  <h2>Selected builds</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>RFP Content Assistant</h3>
+      <div class="stack">Python · retrieval · Claude API</div>
+      <div class="desc">Grounded document Q&amp;A for an RFP-style content library: retrieves answer blocks, flags stale or unapproved content for SME review, and drafts only from approved sources, refusing to fabricate.</div>
+      <div class="row"><span class="chip oss">Open source</span><span class="links"><a href="https://github.com/Jamoprompts/rfp-content-assistant" target="_blank" rel="noopener">View code</a></span></div>
+    </div>
+
+    <div class="card">
+      <h3>Ape Index</h3>
+      <div class="stack">Python · MediaPipe · Claude vision · Expo · FastAPI</div>
+      <div class="desc">AI climbing coach. A computer-vision pose pipeline (97% detection on real footage) feeds a Claude vision model for structured coaching, served through a full mobile app and a FastAPI backend. Built and smoke-tested end to end.</div>
+      <div class="row"><span class="chip">Built · in testing</span></div>
+    </div>
+
+    <div class="card">
+      <h3>Angles</h3>
+      <div class="stack">Supabase · Vercel · realtime</div>
+      <div class="desc">No-login event-footage web app: a crowd uploads and votes clips into a ranked feed, with a verified realtime backend and row-level security. Deployed for a live venue test.</div>
+      <div class="row"><span class="chip live">Deployed</span><span class="links"><a href="https://angles-jamo-prompts.vercel.app" target="_blank" rel="noopener">View live</a></span></div>
+    </div>
+
+    <div class="card">
+      <h3>Vibe-Matched Story Edits</h3>
+      <div class="stack">customer discovery · OpenTimelineIO · ffmpeg</div>
+      <div class="desc">An AI video-editing service, currently in validation. Running structured customer-discovery interviews against pre-committed go/no-go criteria, with a technical spike proving an automated edit-list to timeline to render pipeline.</div>
+      <div class="row"><span class="chip val">In validation</span></div>
+    </div>
+
+    <div class="card">
+      <h3>FirstMile</h3>
+      <div class="stack">Node · Claude streaming · PWA</div>
+      <div class="desc">AI running coach for people who are not runners yet. A profile-calibrated streaming coach with conservative safety guardrails baked into the system prompt.</div>
+      <div class="row"><span class="chip">Built</span></div>
+    </div>
+
+    <div class="card">
+      <h3>The Gunk Guys</h3>
+      <div class="stack">Cloudflare Pages · vanilla JS</div>
+      <div class="desc">Production marketing site with a photo-based quote funnel (client-side image compression, form routing) for a local services business. Live in production.</div>
+      <div class="row"><span class="chip live">Live</span><span class="links"><a href="https://the-gunk-guys.pages.dev" target="_blank" rel="noopener">View live</a></span></div>
+    </div>
+
+  </div>
+
+  <footer>© 2026 Jameson Francis · College Park, MD</footer>
+</div>
+</body>
+</html>
